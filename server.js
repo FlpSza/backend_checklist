@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const pool = require('./database'); // Importando o pool de conexão
-const bcrypt = require('bcrypt');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
