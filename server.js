@@ -126,12 +126,12 @@ app.post('/users', async (req, res) => {
 // Rota para obter informações do usuário
 app.get('/user-info', authenticateToken, (req, res) => {
     // As informações do usuário, incluindo o idSetor, estão disponíveis no objeto req.user
-    const { idSetor } = req.user;
+    const { idSetor, nome } = req.user;
     
     // Aqui você pode buscar outras informações do usuário no banco de dados, se necessário
 
     // Por fim, você pode enviar as informações do usuário de volta como resposta
-    res.status(200).json({ idSetor });
+    res.status(200).json({ idSetor, nome });
 });
 
 
