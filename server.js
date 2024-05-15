@@ -70,7 +70,8 @@ app.post('/login', (req, res) => {
         const tokenPayload = { 
             id: user.idUsuario, 
             email: user.email, 
-            idSetor: user.idSetor // Incluindo o idSetor no payload
+            idSetor: user.idSetor, // Incluindo o idSetor no payload
+            nome: user.nome
         };
         const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: '1h' });
 
